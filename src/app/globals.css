@@ -55,7 +55,7 @@ body {
 .cartItemBox span:nth-child(2) {
   display: inline-block;
   position: relative;
-  color: #fff;
+  color: var(--white);
   font-size: 12px;
   line-height: 1;
   font-weight: 600;
@@ -130,14 +130,14 @@ body {
   right: 100%;
   bottom: 100%;
   left: 100%;
-  background-color: rgb(1 22 40 / 50%);  
+  background-color: rgb(1 22 40 / 50%);
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-   
+
 }
 
 .gallerySec .galleryImg:hover .imgViewOverlay {
@@ -145,7 +145,122 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;  
+  left: 0;
   visibility: visible;
-  opacity: 1;  
+  opacity: 1;
+  display: flex;
+}
+
+
+/*Product List Section Css Start Here*/
+.productBox>ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.productBox>ul>li {
+  width: calc(100% / 4);
+  transition: all 0.3s ease-in-out;
+}
+
+.productBox>ul>li:hover {
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.productBox>ul>li .productcard {
+  width: 75%;
+  margin-left: auto;
+}
+
+.productBox>ul>li .productcard .productImgBox a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -40px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.productBox>ul>li:hover .productcard .productImgBox a {
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.productBox>ul>li .productcard .moreProductImgBox {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 0px;
+  width: 60px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.productBox>ul>li:hover .productcard .moreProductImgBox {
+  visibility: visible;
+  opacity: 1;
+  left: -75px;
+}
+
+.productBox>ul>li .productcard .moreProductImgBox ul li {
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 10px;
+  width: 60px;
+}
+
+.productBox>ul>li .productcard .moreProductImgBox ul li:hover {
+  border: 1px solid var(--darkBlue);
+}
+
+.clientFeedback_Sec {
+  background: url(../images/testimonial.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.clientFeedback_Sec::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0 43 65 / 60%);
+}
+
+.cstmInputBox .cstmInput {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 10px 10px;
+  width: 100%;
+}
+
+.cstmInputBox .cstmInput:focus {
+  outline: none;
+  border-radius: 0;
+}
+
+.cstmInputBox .goBTN {
+  border: 0px;
+  background: #000;
+  color: #fff;
+  padding: 5px 10px;
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.bottomFooterSec {
+  border-top:1px solid #ffffff33;
 }

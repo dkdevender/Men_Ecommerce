@@ -10,19 +10,24 @@ import Logo from "../images/Logo.webp"
 import Image from "next/image";
 import { IoBagOutline } from "react-icons/io5";
 
+import { IoMdMenu } from "react-icons/io";
+// import { IoClose } from "react-icons/io5";
+
 
 
 const header = () => {
-    const navigation = [
-        { name: 'Dashboard', href: '#', current: true },
-        { name: 'Team', href: '#', current: false },
-        { name: 'Projects', href: '#', current: false },
-        { name: 'Calendar', href: '#', current: false },
-    ]
+    // const navigation = [
+    //     { name: 'Dashboard', href: '#', current: true },
+    //     { name: 'Team', href: '#', current: false },
+    //     { name: 'Projects', href: '#', current: false },
+    //     { name: 'Calendar', href: '#', current: false },
+    // ]
 
     // function classNames(...classes) {
     //     return classes.filter(Boolean).join(' ')
     // }
+
+
 
     return (
         <>
@@ -72,25 +77,16 @@ const header = () => {
                 </div>
             </div>
 
-            <div className="bg-white">
+            <div className="bg-white sticky top-0 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] z-50">
                 <div className="container mx-auto">
                     <div className="relative flex h-16 items-center justify-between">
-                        <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                            {/* Mobile menu button*/}
-                            <button className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                                <span className="absolute -inset-0.5" />
-                                <span className="sr-only">Open main menu</span>
-                                {/* <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
-                                <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" /> */}
-                            </button>
-                        </div>
 
                         <div className="flex flex-1 items-center justify-between">
                             <div className="flex flex-shrink-0 items-center">
                                 <Image src={Logo} width="200" className="h-8 w-auto" />
                             </div>
 
-                            <div className="hidden sm:ml-6 sm:flex items-center navbarLinkBox gap-3">
+                            <div className="hidden sm:ml-6 lg:flex items-center navbarLinkBox gap-3">
                                 <div className="flex space-x-4">
                                     <Link href="/" className="navlink text-blue-950 px-3 py-2 text-sm font-semibold uppercase">
                                         Home Page
@@ -112,15 +108,24 @@ const header = () => {
                                         My Account
                                     </Link>
                                 </div>
+                            </div>
 
-                                <div className="cartItemBox">
-                                    <Link href="/" className="inline-flex items-center">
-                                        <IoBagOutline />
-                                        <span>0</span>
-                                        <span className="text-sm text-blue-950 font-semibold">$0.00</span>
-                                    </Link>
+                            <div className="cartItemBox flex gap-3 items-center">
+                                <Link href="/" className="inline-flex items-center">
+                                    <IoBagOutline />
+                                    <span>0</span>
+                                    <span className="text-sm text-blue-950 font-semibold">$0.00</span>
+                                </Link>
+
+                                <div className="static inset-y-0 right-0 flex items-center lg:hidden">
+                                    {/* Mobile menu button*/}
+                                    <button className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                        <IoMdMenu aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
+                                        {/* <IoClose aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" /> */}
+                                    </button>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
