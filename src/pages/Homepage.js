@@ -40,7 +40,7 @@ const Homepage = () => {
     return (
         <>
             <Header />
-            
+
             <Slide />
 
             <div className="aboutSec bg-[#f0efeb]">
@@ -66,11 +66,13 @@ const Homepage = () => {
                 <div className="container mx-auto">
                     <div className="sectionHeading text-center mb-7">
                         <span className="text-md font-medium text-[#008ed6] italic mb-1">Services</span>
-                        <h1 className="text-4xl font-black uppercase text-[#011628] mb-3">Suits for men</h1>
+                        <h1 className="sm:text-4xl font-black uppercase text-[#011628] mb-3">Suits for men</h1>
                         <span className="textAfterShape">&nbsp;</span>
                     </div>
 
-                    <div className="grid grid-cols-4 gap-4">
+                    {/* <div className="grid grid-cols-4 gap-4"> */}
+                    {/* <div className="flex flex-col flex md:flex-row gap-4"> */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                         <div className="serviceCard">
                             <span className="w-[100px] h-[100px] rounded-full bg-[#f0efeb] block p-6 mx-auto mb-5" >
                                 <Image src={ServiceIcon1} />
@@ -112,7 +114,7 @@ const Homepage = () => {
 
             <div className="bestQualitySec flex flex-col items-center justify-center py-24">
                 <span className="text-md font-medium text-[#008ed6] italic mb-2">Best Quality</span>
-                <h1 className="text-4xl font-black uppercase text-[#fff] mb-5">For unique people only</h1>
+                <h1 className="sm:text-4xl font-black uppercase text-[#fff] mb-5 text-center">For unique people only</h1>
                 <button className="bg-sky-500 text-white text-sm font-medium rounded-full py-3 px-7 uppercase">Find Your Suit</button>
             </div>
 
@@ -120,11 +122,45 @@ const Homepage = () => {
                 <div className="container mx-auto">
                     <div className="sectionHeading text-center mb-7">
                         <span className="text-md font-medium text-[#008ed6] italic mb-1">Hello Gentlemen</span>
-                        <h1 className="text-4xl font-black uppercase text-[#011628] mb-3">Latest Suits</h1>
+                        <h1 className="sm:text-4xl font-black uppercase text-[#011628] mb-3">Latest Suits</h1>
                         <span className="textAfterShape">&nbsp;</span>
                     </div>
 
-                    <div className="productBox">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+                    </div>
+
+                    <div className="productBox hidden">
                         <ul>
                             <li>
                                 <Productcard />
@@ -165,11 +201,11 @@ const Homepage = () => {
             <div className="gallerySec bg-[#011628] pt-14">
                 <div className="sectionHeading text-center mb-7">
                     <span className="text-md font-medium text-[#008ed6] italic mb-1">Gallery</span>
-                    <h1 className="text-4xl font-black uppercase text-white mb-3">Featured work</h1>
+                    <h1 className="sm:text-4xl font-black uppercase text-white mb-3">Featured work</h1>
                     <span className="textAfterShape whiteTextafterShape">&nbsp;</span>
                 </div>
 
-                <div class="grid grid-row-2 grid-cols-5">
+                <div class="grid sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5">
                     <div className="galleryImg relative">
                         <Image src={galleryImg1} />
                         <div className="imgViewOverlay">
@@ -237,11 +273,11 @@ const Homepage = () => {
                 <div className="container mx-auto">
                     <div className="sectionHeading text-center mb-7">
                         <span className="text-md font-medium text-[#008ed6] italic mb-1">Our Blog</span>
-                        <h1 className="text-4xl font-black uppercase text-[#011628] mb-3">Latest News</h1>
+                        <h1 className="sm:text-4xl font-black uppercase text-[#011628] mb-3">Latest News</h1>
                         <span className="textAfterShape">&nbsp;</span>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         <div className="blogCardWrapper bg-[#f5f5f5]">
                             <div className="blogImgBox mb-5">
                                 <Image src={Blogimg1} className="w-[100%]" />
@@ -282,11 +318,11 @@ const Homepage = () => {
                 <div className="container mx-auto z-10 relative">
                     <div className="sectionHeading text-center mb-5">
                         <span className="text-md font-medium text-[#008ed6] italic mb-1">Testimonials</span>
-                        <h1 className="text-4xl font-black uppercase text-[#fff] mb-3">What Clients Say</h1>
+                        <h1 className="sm:text-4xl font-black uppercase text-[#fff] mb-3">What Clients Say</h1>
                         <span className="textAfterShape whiteTextafterShape">&nbsp;</span>
                     </div>
 
-                    <div class="grid gap-5 grid-cols-2">
+                    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
                         <div className="clientFeedbackcard">
                             <p className="text-sm font-light text-[#fff] leading-7 text-center mb-5 px-5">Aenean ullamcorper convallis mi, in viverra quam mattis sed. Sed at faucibus neque. Fusce egestas odio vitae augue scelerisque, in laoreet nisi bibendum. Sed ultrices nisi ut consequat ultrices. Suspendisse id luctus metus, quis commodo ex.</p>
                             <div className="flex justify-center items-center gap-3">
@@ -334,12 +370,62 @@ const Homepage = () => {
                 <div className="container mx-auto">
                     <div className="sectionHeading text-center mb-7">
                         <span className="text-md font-medium text-[#008ed6] italic mb-1">Shop</span>
-                        <h1 className="text-4xl font-black uppercase text-[#011628] mb-3">Popular Suits</h1>
+                        <h1 className="sm:text-4xl font-black uppercase text-[#011628] mb-3">Popular Suits</h1>
                         <span className="textAfterShape">&nbsp;</span>
                     </div>
 
-                    <div className="productBox">
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+
+                        <div className="productBox">
+                            <Productcard />
+                        </div>
+                    </div>
+
+                    <div className="productBox hidden">
                         <ul>
+                            <li>
+                                <Productcard />
+                            </li>
+
+                            <li>
+                                <Productcard />
+                            </li>
+
+                            <li>
+                                <Productcard />
+                            </li>
+
+                            <li>
+                                <Productcard />
+                            </li>
+
                             <li>
                                 <Productcard />
                             </li>
@@ -362,7 +448,7 @@ const Homepage = () => {
 
             <div className="shippinginfoSec bg-[#f0efeb] py-3">
                 <div className="container mx-auto">
-                    <div class="grid gap-5 grid-cols-4">
+                    <div class="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5 justify-center">
                         <div className="shippinginfoCard flex items-center gap-3">
                             <div className="w-14 h-14 overflow-hidden rounded-full bg-[#011628] flex items-center justify-center">
                                 <FaShippingFast className="text-[#fff] w-16" />
@@ -387,7 +473,7 @@ const Homepage = () => {
 
                         <div className="shippinginfoCard flex items-center gap-3">
                             <div className="w-14 h-14 overflow-hidden rounded-full bg-[#011628] flex items-center justify-center">
-                                <FaWallet  className="text-[#fff] w-16" />
+                                <FaWallet className="text-[#fff] w-16" />
                             </div>
 
                             <div>
@@ -398,7 +484,7 @@ const Homepage = () => {
 
                         <div className="shippinginfoCard flex items-center gap-3">
                             <div className="w-14 h-14 overflow-hidden rounded-full bg-[#011628] flex items-center justify-center">
-                                <FaHeadset  className="text-[#fff] w-16" />
+                                <FaHeadset className="text-[#fff] w-16" />
                             </div>
 
                             <div>

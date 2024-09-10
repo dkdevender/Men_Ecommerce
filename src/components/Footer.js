@@ -12,7 +12,7 @@ const Footer = () => {
         <>
             <div className="footerSec bg-[#011628] py-12">
                 <div className="container mx-auto">
-                    <div class="grid gap-5 grid-cols-4">
+                    <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
                         <div className="footerCardWrapper">
                             <Link href="/">
                                 <Image src={FooterLogo} width="200" />
