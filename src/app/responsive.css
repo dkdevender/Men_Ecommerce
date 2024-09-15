@@ -2,10 +2,60 @@
     .container {
         max-width: 95%;
     }
+
+    .aboutSec .aboutContentBox {
+        padding: 15px 15px;
+    }
+
+    .aboutContentBox h1 {
+        font-size: 24px;
+    }
+
+    .aboutContentBox img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .productBox .productcard .moreProductImgBox {
+        display: none;
+    }
 }
 
 @media screen and (min-width:991px) and (max-width:1080px) {}
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+    .aboutSec>.flex {        
+        flex-wrap: wrap;
+    }
 
-@media screen and (max-width:576px) {}
+    .aboutSec .about1imgBox {
+        width: 40%;
+    }
+
+    .aboutSec .aboutContentBox {
+        width: 60%;
+    }
+
+    .aboutSec .about2imgBox {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .aboutSec>.flex {        
+        flex-direction: wrap;
+    }
+
+    .aboutSec .about1imgBox {        
+        display: none;
+    }
+
+    .aboutSec .aboutContentBox {
+        width: 100%;
+    }
+
+    .aboutSec .about2imgBox {
+        width: 100%;
+    }
+}

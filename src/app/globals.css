@@ -169,7 +169,7 @@ body {
 }
 
 .productBox .productcard {
-  width: 75%;
+  width: 100%;
   margin-left: auto;
 }
 
@@ -191,7 +191,7 @@ body {
 
 .productBox .productcard .moreProductImgBox {
   position: absolute;
-  top: 15px;
+  top: 0px;
   bottom: 15px;
   left: 0px;
   width: 60px;
@@ -204,7 +204,7 @@ body {
 .productBox:hover .productcard .moreProductImgBox {
   visibility: visible;
   opacity: 1;
-  left: -75px;
+  left: -60px;
 }
 
 .productBox .productcard .moreProductImgBox ul li {

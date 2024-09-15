@@ -12,7 +12,7 @@ const Productcard = () => {
         <>
             <div className="productcard p-3 relative">
                 <div className="productCardWrapper">
-                    <div className="productImgBox overflow-hidden relative mb-3">
+                    <div className="productImgBox flex justify-center overflow-hidden relative mb-3">
                         <Image src={SuitsImage} alt="Product-Image" />
                         <Link href="\" className="bg-[#011628] text-[#fff] p-2 block text-center uppercase text-sm">Add To Cart</Link>
                     </div>

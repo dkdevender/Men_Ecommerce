@@ -51,7 +51,7 @@ const Homepage = () => {
 
                     <div className="aboutContentBox flex flex-col items-center justify-center px-20 text-center">
                         <span className="text-md font-medium text-[#008ed6] italic mb-1">About Us</span>
-                        <h1 className="text-4xl font-black uppercase text-[#011628] mb-8">Interesting Facts</h1>
+                        <h1 className="sm:text-4xl font-black uppercase text-[#011628] mb-8">Interesting Facts</h1>
                         <p className="text-sm font-regular text-[#4a4a4a] leading-7 mb-8">Morbi quam mi, consectetur non vestibulum ac, fringilla et quam. Mauris malesuada odio et est finibus, id faucibus metus blandit. Etiam et fermentum nunc. Aliquam nec ipsum vel ultricies. Vestibulum eleifend blandit condi</p>
                         <Image src={SignatureImg} width="300" />
                     </div>
