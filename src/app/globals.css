@@ -264,5 +264,28 @@ body {
 }
 
 .bottomFooterSec {
-  border-top:1px solid #ffffff33;
+  border-top: 1px solid #ffffff33;
+}
+
+
+.innerBannr {
+  background: url(../images/breadcrumb-banner.webp) no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.innerBannr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0 0 0 / 75%);
+}
+
+.aboutTrendyImg {
+  height: 650px;
+  overflow: hidden;
 }
